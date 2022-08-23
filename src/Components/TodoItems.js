@@ -1,12 +1,15 @@
 import React from 'react'
 
 //using variables
-export const TodoItems = ({titems,tdelete}) => {
+export const TodoItems = ({listItems,tdelete}) => {
  
   return (
-    <div className='container border-bottom mb-2' >
-      <h4>{titems.title}<button className="btn btn-sm btn-danger ms-4" onClick={()=>tdelete(titems)}>X</button></h4>
-      <p>{titems.desc}</p>
+    <div className='container border-bottom mb-2 d-flex justify-content-between' >
+      <div>
+        <h4>{listItems.title}</h4>
+        <p>{listItems.desc}</p>
+      </div>
+      <div><button className="btn btn-sm btn-danger ms-4" onClick={()=>tdelete(listItems)}>X</button></div>
     </div>
   )
 }

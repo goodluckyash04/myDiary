@@ -13,8 +13,8 @@ export default function TodoList(props) {
     <div className='container' style={style}>
         <h3 className='text-center my-4 py-2 text-white-50 text-bg-dark'>My Tasks for the Day</h3>
         {props.myTask.length===0 ? <p className="text-center"> No Remaining Tasks </p>:
-        props.myTask.map((item)=>
-          <TodoItems titems={item} key={item.sno} tdelete={props.onDel}/>   /*this will redirect myTask from app=>TodoList=>TodoItems*/
+        props.myTask.map((item,key)=>
+          <TodoItems listItems={item} key={key} tdelete={props.onDel}/>   /*this will redirect myTask from app=>TodoList=>TodoItems*/
          )       
          }
     </div>
